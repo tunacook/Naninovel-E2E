@@ -87,5 +87,5 @@ public class Routes
 
     ISequence RouteX => On(Choosing, Choose(), Var("g_completedX", false));
     ISequence RouteY => On(Choosing, Choose(), Var("g_completedY", false));
-    ISequence TrueRoute => Once(Var("g_completedTrue", false));
+    ISequence TrueRoute => Once(Var("g_completedTrue", true));
 }
