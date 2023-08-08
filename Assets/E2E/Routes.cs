@@ -12,38 +12,38 @@ public class Routes
     public IEnumerator CanCompleteCommonRouteWithMaxX () => new E2E()
         .WithTransientState().WithFastForward()
         .StartNew().Play(CommonMaxX)
-        .Once(Script("X_Route")).Ensure(Var<int>("xPoints", 13));
+        .Once(Script("X_Route")).Ensure(Var("xPoints", 13));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithMaxY () => new E2E()
         .WithTransientState().WithFastForward()
         .StartNew().Play(CommonMaxY)
-        .Once(Script("Y_Route")).Ensure(Var<int>("yPoints", 12));
+        .Once(Script("Y_Route")).Ensure(Var("yPoints", 12));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithMinX () => new E2E()
         .WithTransientState().WithFastForward()
-        .StartNew().Play(CommonMinX).Ensure(Var<int>("xPoints", 3));
+        .StartNew().Play(CommonMinX).Ensure(Var("xPoints", 3));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithMinY () => new E2E()
         .WithTransientState().WithFastForward()
-        .StartNew().Play(CommonMinY).Ensure(Var<int>("yPoints", 3));
+        .StartNew().Play(CommonMinY).Ensure(Var("yPoints", 3));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithBadEnd1 () => new E2E()
         .WithTransientState().WithFastForward()
-        .StartNew().Play(CommonBad1).Ensure(Var<int>("xPoints", 2));
+        .StartNew().Play(CommonBad1).Ensure(Var("xPoints", 2));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithBadEnd2 () => new E2E()
         .WithTransientState().WithFastForward()
-        .StartNew().Play(CommonBad2).Ensure(Var<int>("yPoints", 2));
+        .StartNew().Play(CommonBad2).Ensure(Var("yPoints", 2));
 
     [UnityTest]
     public IEnumerator CanCompleteCommonRouteWithDeadEnd () => new E2E()
         .WithTransientState().WithFastForward()
-        .StartNew().Play(CommonDead).Ensure(Var<int>("healthPoints", 0));
+        .StartNew().Play(CommonDead).Ensure(Var("healthPoints", 0));
 
     [UnityTest]
     public IEnumerator WhenXYRoutesCompleteTrueUnlocks () => new E2E()
