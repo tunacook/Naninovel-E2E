@@ -48,8 +48,8 @@ public class Routes
     [UnityTest]
     public IEnumerator WhenXYRoutesCompleteTrueUnlocks () => new E2E()
         .WithTransientState().WithFastForward()
-        .StartNew().Play(CommonMaxX).Play(RouteX)
-        .StartNew().Play(CommonMaxY).Play(RouteY)
+        .StartNew().Play(CommonMaxX, RouteX)
+        .StartNew().Play(CommonMaxY, RouteY)
         .Once(InTitle).Ensure(() => UI("TrueRoute").Visible);
 
     [UnityTest]
