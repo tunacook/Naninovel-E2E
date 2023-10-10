@@ -128,7 +128,7 @@ MonoBehaviour:
       guid: f5aae572225ee1b4c96d1a17fc5cb073
     - name: TitleUI
       pathPrefix: UI
-      guid: 502a0041a34259b4396cdffea5f2381e
+      guid: 9af2f22216242fb418abdcbfe2fd7d8f
     - name: VariableInputUI
       pathPrefix: UI
       guid: bb95f484e341dcd4391a572f22b7d067

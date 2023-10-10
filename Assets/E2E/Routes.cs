@@ -53,7 +53,7 @@ public class Routes
         .Once(InTitle).Ensure(() => UI("TrueRoute").Visible);
 
     [UnityTest]
-    public IEnumerator WhenTrueCompleteTitleBackChanges () => new E2E()
+    public IEnumerator WhenTrueRouteCompleteTitleBackChanges () => new E2E()
         .WithTransientState(GlobalStateMap.With(
             new CustomVariableManager.GlobalState {
                 GlobalVariableMap = new SerializableLiteralStringMap {
